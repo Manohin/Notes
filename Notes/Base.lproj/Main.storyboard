@@ -3,7 +3,6 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,7 +13,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="DIO-fc-xhS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.83423514410017119" green="1" blue="0.95985545806915362" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="4JK-SZ-j4Q" style="IBUITableViewCellStyleDefault" id="ROe-u7-Zur">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -31,6 +30,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.80910060640343406" green="0.92530776515151514" blue="0.90084761716759976" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -39,7 +39,13 @@
                             <outlet property="delegate" destination="Rcn-fB-IQE" id="EGV-ZS-iN8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Мои заметки" id="FlF-xL-Lvl"/>
+                    <navigationItem key="navigationItem" title="Мои заметки" id="FlF-xL-Lvl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="H9J-k6-JiG">
+                            <connections>
+                                <action selector="pushAddAction:" destination="Rcn-fB-IQE" id="2Xq-GH-r89"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dqm-lp-78D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -64,9 +70,4 @@
             <point key="canvasLocation" x="-116.79389312977099" y="-31.690140845070424"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
