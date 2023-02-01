@@ -12,8 +12,8 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard dataItems == [] else { return }
-        dataItems.append("Новая заметка1")
+        guard dataItems.isEmpty else { return }
+        dataItems.append("Новая заметка \(dataItems.count + 1)")
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -26,7 +26,7 @@ class TableViewController: UITableViewController {
     
     @IBAction func pushAddAction(_ sender: UIBarButtonItem) {
         
-        addItem(nameItem: "Новая заметка")
+        addItem(nameItem: "Новая заметка \(dataItems.count + 1)")
         tableView.reloadData()
     }
     // MARK: - Table view data source
